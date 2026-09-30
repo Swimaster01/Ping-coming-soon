@@ -1,330 +1,233 @@
-/* =========================
-   RESET
-========================= */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 /* =========================
    VARIABLES
 ========================= */
-
-:root {
-    --blue-500: hsl(223, 87%, 63%);
-    --blue-200: hsl(223, 100%, 88%);
-    --red-400: hsl(354, 100%, 66%);
-    --gray-400: hsl(0, 0%, 59%);
-    --blue-950: hsl(209, 33%, 12%);
-}
-
-
 /* =========================
    BODY
 ========================= */
-
 body {
-    font-family: "Libre Franklin", sans-serif;
-    color: var(--blue-950);
-    text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  color: hsl(209, 33%, 12%);
+  text-align: center;
 }
-
 
 /* =========================
    MAIN
 ========================= */
-
 main {
-    width: 90%;
-    max-width: 650px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
 }
-
-
-/* =========================
-   LOGO
-========================= */
-
 main > img:first-child {
-    width: 90px;
-    margin-top: 80px;
-    margin-bottom: 40px;
+  width: 90px;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
-
 
 /* =========================
    HEADING
 ========================= */
-
 h1 {
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--gray-400);
-    margin-bottom: 15px;
+  font-size: 48px;
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 15px;
 }
-
 h1 b {
-    color: var(--blue-950);
-    font-weight: 700;
+  color: hsl(209, 33%, 12%);
+  font-weight: 700;
 }
-
-
-/* =========================
-   SUBTITLE
-========================= */
-
 h1 + p {
-    font-size: 20px;
-    margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
-
 
 /* =========================
    FORM
 ========================= */
-
 .sub-form {
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    margin-bottom: 70px;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 70px;
 }
 
+/* =========================
+   FIELD
+========================= */
+.field {
+  flex: 1;
+  text-align: left;
+}
 
 /* =========================
    EMAIL
 ========================= */
-
 .email {
-    flex: 1;
-    height: 55px;
-
-    padding: 0 25px;
-
-    border: 1px solid var(--blue-200);
-    border-radius: 30px;
-
-    font-family: inherit;
-    font-size: 16px;
-
-    outline: none;
+  flex: 1;
+  width: 100%;
+  height: 55px;
+  padding: 0 25px;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
 }
-
 .email::placeholder {
-    color: var(--gray-400);
+  color: hsl(0, 0%, 59%);
 }
-
 .email:focus {
-    border-color: var(--blue-500);
+  border-color: hsl(223, 87%, 63%);
 }
-
+.email.invalid {
+  border-color: hsl(354, 100%, 66%);
+}
 
 /* =========================
    BUTTON
 ========================= */
-
 .sub-btn {
-    width: 200px;
-    height: 55px;
-
-    border: none;
-    border-radius: 30px;
-
-    background-color: var(--blue-500);
-    color: white;
-
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    box-shadow: 0 5px 10px var(--blue-200);
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 30px;
+  background-color: hsl(223, 87%, 63%);
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 10px hsl(223, 100%, 88%);
 }
-
 .sub-btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
+/* =========================
+   ERROR MESSAGE
+========================= */
+.error-msg {
+  color: hsl(354, 100%, 66%);
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 8px;
+  padding-left: 25px;
+}
 
 /* =========================
    DASHBOARD IMAGE
 ========================= */
-
 .sub-form + img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    margin-bottom: 70px;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 70px;
 }
-
 
 /* =========================
    SOCIALS
 ========================= */
-
 .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
-
-
-/* =========================
-   SOCIAL ICON CONTAINERS
-========================= */
-
 .socials section {
-    width: 35px;
-    height: 35px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 1px solid var(--blue-200);
-    border-radius: 50%;
-
-    cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 50%;
+  cursor: pointer;
 }
-
+.socials section:hover {
+  background-color: hsl(223, 87%, 63%);
+}
+.socials section:hover svg {
+  fill: white;
+}
+.socials svg {
+  width: 16px;
+  height: 16px;
+  fill: hsl(223, 87%, 63%);
+}
 
 /* =========================
-   SVG ICONS
+   SOCIAL ICONS
 ========================= */
-
-.socials svg {
-    width: 16px;
-    height: 16px;
-
-    fill: var(--blue-500);
-}
-
-
-/* Facebook */
-
 .facebook svg {
-    width: 14px;
-    height: 14px;
+  width: 14px;
+  height: 14px;
 }
-
-
-/* Twitter */
 
 .twitter svg {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
-
-
-/* Instagram */
 
 .instagram svg {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
-
-
-/* =========================
-   SOCIAL HOVER
-========================= */
-
-.socials section:hover {
-    background-color: var(--blue-500);
-}
-
-.socials section:hover svg {
-    fill: white;
-}
-
 
 /* =========================
    COPYRIGHT
 ========================= */
-
 .socials + p {
-    font-size: 12px;
-    color: var(--gray-400);
-
-    margin-bottom: 40px;
-}
-
-.field {
-    flex: 1;
-    text-align: left;
-}
-
-.email {
-    width: 100%;
-}
-
-.email.invalid {
-    border-color: var(--red-400);
-}
-
-.error-msg {
-    color: var(--red-400);
-    font-size: 12px;
-    font-style: italic;
-    margin-top: 8px;
-    padding-left: 25px;
+  font-size: 12px;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 40px;
 }
 
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 600px) {
-
-    main {
-        width: 85%;
-    }
-
-    main > img:first-child {
-        width: 60px;
-        margin-top: 80px;
-        margin-bottom: 35px;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h1 + p {
-        font-size: 14px;
-        margin-bottom: 30px;
-    }
-
-    .sub-form {
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 70px;
-    }
-
-    .email {
-        width: 100%;
-        height: 50px;
-    }
-
-    .sub-btn {
-        width: 100%;
-        height: 50px;
-    }
-
-    .sub-form + img {
-        margin-bottom: 100px;
-    }
-
-    .socials {
-        margin-bottom: 25px;
-    }
+  main {
+    width: 85%;
+  }
+  main > img:first-child {
+    width: 60px;
+    margin-top: 80px;
+    margin-bottom: 35px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h1 + p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .sub-form {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 70px;
+  }
+  .email {
+    width: 100%;
+    height: 50px;
+  }
+  .sub-btn {
+    width: 100%;
+    height: 50px;
+  }
+  .sub-form + img {
+    margin-bottom: 100px;
+  }
+  .socials {
+    margin-bottom: 25px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

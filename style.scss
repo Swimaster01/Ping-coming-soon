@@ -1,0 +1,305 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+$blue-500: hsl(223, 87%, 63%);
+$blue-200: hsl(223, 100%, 88%);
+$red-400: hsl(354, 100%, 66%);
+$gray-400: hsl(0, 0%, 59%);
+$blue-950: hsl(209, 33%, 12%);
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    color: $blue-950;
+    text-align: center;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+
+    > img:first-child {
+        width: 90px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    color: $gray-400;
+    margin-bottom: 15px;
+
+    b {
+        color: $blue-950;
+        font-weight: 700;
+    }
+
+    + p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.sub-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+
+/* =========================
+   FIELD
+========================= */
+
+.field {
+    flex: 1;
+    text-align: left;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.email {
+    flex: 1;
+    width: 100%;
+    height: 55px;
+
+    padding: 0 25px;
+
+    border: 1px solid $blue-200;
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+
+    &::placeholder {
+        color: $gray-400;
+    }
+
+    &:focus {
+        border-color: $blue-500;
+    }
+
+    &.invalid {
+        border-color: $red-400;
+    }
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.sub-btn {
+    width: 200px;
+    height: 55px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: $blue-500;
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 10px $blue-200;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+
+/* =========================
+   ERROR MESSAGE
+========================= */
+
+.error-msg {
+    color: $red-400;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 8px;
+    padding-left: 25px;
+}
+
+
+/* =========================
+   DASHBOARD IMAGE
+========================= */
+
+.sub-form + img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 70px;
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    section {
+        width: 35px;
+        height: 35px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid $blue-200;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: $blue-500;
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+
+        fill: $blue-500;
+    }
+}
+
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.facebook svg {
+    width: 14px;
+    height: 14px;
+}
+
+.twitter svg {
+    width: 16px;
+    height: 16px;
+}
+
+.instagram svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.socials + p {
+    font-size: 12px;
+    color: $gray-400;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 85%;
+
+        > img:first-child {
+            width: 60px;
+            margin-top: 80px;
+            margin-bottom: 35px;
+        }
+    }
+
+    h1 {
+        font-size: 28px;
+
+        + p {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .sub-form {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 70px;
+    }
+
+    .email {
+        width: 100%;
+        height: 50px;
+    }
+
+    .sub-btn {
+        width: 100%;
+        height: 50px;
+    }
+
+    .sub-form + img {
+        margin-bottom: 100px;
+    }
+
+    .socials {
+        margin-bottom: 25px;
+    }
+}
