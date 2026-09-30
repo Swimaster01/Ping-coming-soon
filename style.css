@@ -1,0 +1,330 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --blue-500: hsl(223, 87%, 63%);
+    --blue-200: hsl(223, 100%, 88%);
+    --red-400: hsl(354, 100%, 66%);
+    --gray-400: hsl(0, 0%, 59%);
+    --blue-950: hsl(209, 33%, 12%);
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    color: var(--blue-950);
+    text-align: center;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+main > img:first-child {
+    width: 90px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--gray-400);
+    margin-bottom: 15px;
+}
+
+h1 b {
+    color: var(--blue-950);
+    font-weight: 700;
+}
+
+
+/* =========================
+   SUBTITLE
+========================= */
+
+h1 + p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.sub-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.email {
+    flex: 1;
+    height: 55px;
+
+    padding: 0 25px;
+
+    border: 1px solid var(--blue-200);
+    border-radius: 30px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+}
+
+.email::placeholder {
+    color: var(--gray-400);
+}
+
+.email:focus {
+    border-color: var(--blue-500);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.sub-btn {
+    width: 200px;
+    height: 55px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: var(--blue-500);
+    color: white;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 10px var(--blue-200);
+}
+
+.sub-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   DASHBOARD IMAGE
+========================= */
+
+.sub-form + img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 70px;
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   SOCIAL ICON CONTAINERS
+========================= */
+
+.socials section {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--blue-200);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   SVG ICONS
+========================= */
+
+.socials svg {
+    width: 16px;
+    height: 16px;
+
+    fill: var(--blue-500);
+}
+
+
+/* Facebook */
+
+.facebook svg {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* Twitter */
+
+.twitter svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Instagram */
+
+.instagram svg {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================
+   SOCIAL HOVER
+========================= */
+
+.socials section:hover {
+    background-color: var(--blue-500);
+}
+
+.socials section:hover svg {
+    fill: white;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.socials + p {
+    font-size: 12px;
+    color: var(--gray-400);
+
+    margin-bottom: 40px;
+}
+
+.field {
+    flex: 1;
+    text-align: left;
+}
+
+.email {
+    width: 100%;
+}
+
+.email.invalid {
+    border-color: var(--red-400);
+}
+
+.error-msg {
+    color: var(--red-400);
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 8px;
+    padding-left: 25px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 85%;
+    }
+
+    main > img:first-child {
+        width: 60px;
+        margin-top: 80px;
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h1 + p {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .sub-form {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 70px;
+    }
+
+    .email {
+        width: 100%;
+        height: 50px;
+    }
+
+    .sub-btn {
+        width: 100%;
+        height: 50px;
+    }
+
+    .sub-form + img {
+        margin-bottom: 100px;
+    }
+
+    .socials {
+        margin-bottom: 25px;
+    }
+}
